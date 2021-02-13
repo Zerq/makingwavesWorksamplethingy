@@ -1,0 +1,12 @@
+﻿.colorBlock {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px grey;
+}
+
+.ColorList {
+    background-color: silver;
+    border-radius: 5px;
+    padding: 10px;
+}

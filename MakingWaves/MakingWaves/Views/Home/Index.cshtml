@@ -1,0 +1,45 @@
+﻿@using MakingWaves.Helpers;
+@model (List<ExampleData> Group1, List<ExampleData> Group2, List<ExampleData> Group3, PagingModel paging);
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="ColorList">
+    <h3>ColorExamples</h3>
+    <ul class="group1">
+        <h4>Group1</h4>
+        @foreach (var item in this.Model.Group1)
+        {
+            <li class="colorBlock" style="background-color:@item.Color; border:solid 1px @item.ContrastColor(); color:@item.ContrastColor();">
+                <div>@item.Name</div>
+                <div>@item.PantoneValue</div>
+                <div>@item.Year</div>
+            </li>
+        }
+    </ul>
+    <ul class="group2">
+        <h4>Group2</h4>
+        @foreach (var item in this.Model.Group2)
+        {
+            <li class="colorBlock" style="background-color:@item.Color; border:solid 1px @item.ContrastColor(); color:@item.ContrastColor();">
+                <div>@item.Name</div>
+                <div>@item.PantoneValue</div>
+                <div>@item.Year</div>
+            </li>
+        }
+    </ul>
+    <ul class="group3">
+        <h4>Group3</h4>
+        @foreach (var item in this.Model.Group3)
+        {
+            <li class="colorBlock" style="background-color:@item.Color; border:solid 1px @item.ContrastColor(); color:@item.ContrastColor();">
+                <div>@item.Name</div>
+                <div>@item.PantoneValue</div>
+                <div>@item.Year</div>
+            </li>
+        }
+    </ul>
+
+
+   @await Html.PartialAsync("../shared/_PagingPartial.cshtml", Model.paging)
+
+</div>

@@ -1,0 +1,51 @@
+﻿@model PagingModel
+@using MakingWaves.Helpers;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<style>
+    nav li {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .page {
+        padding-inline: 5px;
+    }
+
+    nav.paging > ul {
+        text-align: center;
+    }
+</style>
+<nav class="paging">
+    <ul>
+        <li>
+            @if (Model.Previous() != null)
+            {
+                @Html.ActionLink("<", $"Index", new { page = Model.Previous() })
+            }
+            else
+            {
+                <span>&lt;</span>
+            }
+        </li>
+
+        @foreach (var pageNumber in Model.GetPages())
+        {
+            <span class="page">@Html.ActionLink(pageNumber.ToString(), $"Index", new { page= pageNumber})</span>
+        }
+
+        <li>
+            @if (Model.Next() != null)
+            {
+                @Html.ActionLink(">", $"Index", new { page = Model.Next() })
+            }
+            else
+            {
+                <span>&gt;</span>
+            }
+        </li>
+    </ul>
+</nav>

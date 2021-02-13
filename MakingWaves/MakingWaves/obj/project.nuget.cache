@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4s/mcBHXrr2q0da/IBcODoSokv0Zj+rrEEK6xOP67IUwaRjU5e3o3K3/zGAHwEoScrFQOZjTd8df/sgbE21gyA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zerq_\\Source\\Repos\\Zerq\\makingwavesWorksamplethingy\\MakingWaves\\MakingWaves\\MakingWaves.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zerq_\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
